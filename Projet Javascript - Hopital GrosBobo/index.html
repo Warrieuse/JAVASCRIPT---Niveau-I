@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<!-- # Hopital GrosBobo
+Animer une page en javascript
+
+# Contexte :
+L'hôpital "Grosbobo" de Springfield souhaite développer un outil d'apprentissage
+ pour ses infirmiers et internes.
+En effet, leurs erreurs aussi grossières que régulières nuisent
+fortement à la réputation de l'établissement.
+Ce site aura pour vocation de former le personnel pour ne plus
+qu'il se trompe lors d’interventions pour soigner les patients.
+
+# Projet :
+Vous devez réaliser une page web, montrant les différentes parties
+du corps comme dans l'exemple donné et la description de celles-ci.
+Vous pouvez travailler en binôme. -->
+
+
+<!-- # Contraintes :
+Vous devez suivre la maquette fournie dans le fichier resultat.png.
+L'image du corps est directement mise à disposition par le service
+ des archives de l'Hôpital GrosBobo et est à récupérer ici : corps.png. Lorsque vous cliquerez sur l'un des disques (à disposer sur le corps, il s'agit de div avec du CSS), le texte descriptif (que vous irez cherchez sur wikipedia par exemple) s'affichera dans la colonne de droite.
+
+# Consignes :
+● Utilisation des attributs HTML "class" et "id" dans le code HTML
+● Utilisation de la police Arvo (voir sur GoogleFont)
+● Utilisation des balises et attributs HTML sémantiques
+● Séparation du HTML, du CSS et du JavaScript pour un code propre et
+ lisible
+● Utilisation des media-queries pour obtenir un résultat responsive
+● Possibilité d'utiliser jQuery (aucune obligation)
+● Vous pouvez bien évidemment choisir la couleur de fond ainsi que
+ les styles pour améliorer la mise en page.
+ -->
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hopital Gros Bobo</title>
+
+    <!-- <link here -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- link JS -->
+    <script type="text/javascript" src="main.js"></script>
+
+
+  </head>
+
+  <!---------------------------------------------------------------->
+
+  <body>
+    <!-----------HEADER------------------------------------------------->
+    <header>
+      <h1 class="police">le corps humain</h1>
+    </header>
+    <!-----------MAIN------------------------------------------------->
+    <main class="container">
+      <div class="row">
+
+            <!--debut section Left-->
+      <section  class="col col-xs-12" id="sectionL">
+        <img  class="float-md-right"src="corps.png" alt="corps humain">
+        <span id="clik1" class="spanbtn active" onclick="visible(1)"></span>
+        <span id="clik2" class="spanbtn" onclick="visible(2)"></span>
+        <span id="clik3" class="spanbtn" onclick="visible(3)"></span>
+        <span id="clik4" class="spanbtn" onclick="visible(4)"></span>
+        <span id="clik5" class="spanbtn" onclick="visible(5)"></span>
+        <span id="clik6" class="spanbtn" onclick="visible(6)"></span>
+      </section><!--fin de sectionL-->
+
+          <!--début section Right-->
+      <section  class="col col-xs-12" id="sectionR">
+        <div class="row">
+
+            <article id="text1" class="articletext textactive p-3 police d-block">
+              <h4>epaule:</h4>
+              <p>L'épaule (nom féminin) est la région morphologique se situant à la jonction du tronc avec le membre supérieur. Elle comporte plusieurs articulations qui concourent à en faire le complexe articulaire le plus mobile du corps humain. Elle permet d'orienter le membre supérieur dans l'espace, autorisant en particulier son extrémité effectrice, la main, à assurer ses rôles de préhension et de communication avec l'environnement situé à sa portée. </p>
+            </article>
+
+            <article id="text2" class="articletext p-3 police">
+              <h4>poignet:</h4>
+              <p>Le poignet est une région du membre supérieur située entre la main et l'avant-bras, et contenant le carpe. Élément-clé pour le fonctionnement de la main, il permet les mouvements (c'est-à-dire les changements de place et d’orientation) de la main par rapport à l’avant-bras, transmet les forces appliquées de la main à l’avant-bras, permet d'adapter la capacité de flexion-extension maximale des doigts et de la préhension.</p>
+            </article>
+
+            <article id="text3" class="articletext p-3 police">
+              <h4 >coude:</h4>
+              <p >Le coude (ou articulation olécranienne) est la partie du membre supérieur située entre le bras et l'avant-bras. Cette articulation comprend en avant la région du « pli du coude » (ou fosse cubitale). C'est un complexe articulaire synovial du membre supérieur humain reliant le bras à l'avant-bras. Il unit ainsi trois os entre eux : le radius, l'ulna (cubitus) et l'humérus. Elle est la réunion de trois articulations : huméro-ulnaire, huméro-radiale et radio-ulnaire proximale (supérieure). Lorsque l'avant-bras est tendu (extension complète), le bras et l'avant-bras ne sont pas alignés dans le plan frontal. Les deux parties forment un angle ouvert en dehors, d'environ 170° chez l'homme, 160° chez la femme ; c'est ce qui est appelé le valgus physiologique (on retrouve la même chose pour le genou).</p>
+            </article>
+
+            <article id="text4"class="articletext p-3 police">
+              <h4>hanche:</h4>
+              <p>La hanche ou articulation coxo-fémorale est une articulation (sphéroïde) qui permet de joindre la cuisse au bassin. Elle met en jeu deux os : l'os coxal et le fémur.
+            </article>
+
+            <article id="text5" class="articletext p-3 police">
+              <h4>genoux:</h4>
+              <p>Le genou est une articulation qui permet de joindre la jambe à la cuisse. Elle met en jeu trois os, le fémur, le tibia et la patella, par le biais de trois articulations, l'articulation fémoro-patellaire et la double articulation fémoro-tibiale. Le cartilage assure la fluidité des mouvements du genou. Le tissu élastique fin, le cartilage, protège l'os et fait en sorte que les surfaces de l'articulation glissent facilement les unes contre les autres. Le genou renferme deux types de cartilages articulaires: le cartilage fibreux (ménisque) et le cartilage hyalin.</p>
+            </article>
+
+            <article id="text6" class="articletext p-3 police">
+              <h4>cheville:</h4>
+              <p>La cheville ou cou-de-pied est l'articulation qui relie la jambe et le pied. Elle est parfois sujette à des entorses, le plus souvent externes par flexion plantaire et pied en équin. Une cheville adulte est composée, au point de vue osseux, de l'épiphyse inférieure du tibia (malléole interne et plafond), de l'épiphyse inférieure de la fibula (ou péroné) (malléole externe) et du talus (ou astragale). Classiquement, on parle d'articulation supinale de l'arrière pied.</p>
+            </article>
+      </section><!--fin de sectionR-->
+
+    </div><!--fin de row main-->
+    </main>
+    <!-----------FOOTER------------------------------------------------->
+    <footer>
+    </footer>
+
+  </body>
+</html>

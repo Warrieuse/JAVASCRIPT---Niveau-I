@@ -1,0 +1,103 @@
+body{
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.police{/*je met la police via une class sinon si je l'as met dans le body BOOTSTRAP me la fait sauter*/
+  font-family: 'Arvo', serif;
+}
+/********************HEADER*********************************/
+
+h1{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 40px;
+  text-align: center; /*il suffit car aucun bloc definit au desus*/
+}
+
+/*********************MAIN*********************************/
+
+ main{
+   border: 1px solid black;
+   height: 80%;
+ }
+                /**********sectionL***********/
+#sectionL{
+  position: relative;/*position parent*/
+}
+
+ .spanbtn{
+   position: absolute;;/*position enfant*/
+   width: 50px; height: 50px;
+   border-radius: 50%;
+   background-color: rgba(0,0,0,0.5);
+ }
+
+.active{/*quand le span est cliqué il change de couleur*/
+   background-color: rgba(249,5,5,0.5)
+ }
+
+ #clik1{top:83px; left:13px;}
+ #clik2{top:220px; left:3px;}
+ #clik3{top:180px; left:113px;}
+ #clik4{top:236px; left:92px;}
+ #clik5{top:340px; left:37px;}
+ #clik6{top:430px; left:78px;}
+
+                /**********sectionR***********/
+
+.articletext{
+  display:none;
+}
+
+
+h4{
+  text-transform: capitalize;
+}
+
+/*********************FOOTER*****************************/
+/******************MEDIA QUERIES*************************/
+
+/*media quieris uniquement pour les puces*/
+
+/*realisé en mobile firts donc aucun @media query
+ pour les phone*/
+
+/*format phone sm*/
+@media screen and (min-width:576px) {
+  #clik1{top:83px; left:12px;}
+  #clik2{top:220px;left: 0px;}
+  #clik3{top:180px; left:114px;}
+  #clik4{top:236px; left:87px;}
+  #clik5{top:340px; left:36px;}
+  #clik6{top:430px; left:81px;}
+}
+/*format tablette md*/
+@media screen and (min-width:768px) {
+  #clik1{top:83px; left:200px;}
+  #clik2{top:220px; left:192px;}
+  #clik3{top:180px; left:303px;}
+  #clik4{top:236px; left:282px;}
+  #clik5{top:340px; left:228px;}
+  #clik6{top:430px; left:270px;}
+}
+
+/*format ordinateur lg*/
+@media screen and (min-width:992px) {
+  #clik1{top:83px; left:320px;}
+  #clik2{top:220px; left:313px;}
+  #clik3{top:180px; left:424px;}
+  #clik4{top:236px; left:400px;}
+  #clik5{top:340px; left:348px;}
+  #clik6{top:430px; left:390px;}
+}
+/*format ordinateur extra large xl*/
+@media screen and (min-width:1200px) {
+  #clik1{top:83px; left:411px;}
+  #clik2{top:220px; left:404px;}
+  #clik3{top:180px; left:516px;}
+  #clik4{top:236px; left:489px;}
+  #clik5{top:340px; left:436px;}
+  #clik6{top:430px; left:477px;}
+}
